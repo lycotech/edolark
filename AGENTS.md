@@ -28,12 +28,22 @@ npm run start       # production server on :3000
 npm run dev         # development server on :3000
 ```
 
-## Entry Point
+## Pages
 
-- `app/page.tsx` renders `components/edolark-home.tsx`, the full homepage.
-- `app/layout.tsx` contains fonts and page metadata.
-- `lib/properties.ts` defines the demo property data and types.
-- Local property photography is in `public/images/`.
+- `app/page.tsx` — homepage
+- `app/about/page.tsx` — About us
+- `app/services/page.tsx` — Our services
+- `app/projects/page.tsx` — Project listing
+- `app/projects/[slug]/page.tsx` — Project detail with photo gallery
+- `app/team/page.tsx` — Meet the team
+- `app/contact/page.tsx` — Contact form and details
+- `app/sitemap.ts` and `app/robots.ts` — SEO files
+
+## Data
+
+- `lib/data.ts` holds company info, projects, services and team members.
+- Project images with spaces in filenames (e.g. `VIEW 1.png`) are encoded with `encodeURI()` when passed to Next `<Image>`.
+- Original supplied logos are `public/logo.jpeg` and `public/logo2.jpeg`; the processed transparent logos are `public/edolark-logo-transparent.png` and `public/edolark-logo-light.png`.
 
 ## Important Notes
 

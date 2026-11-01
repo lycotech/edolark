@@ -1,31 +1,54 @@
 # EDOLARK Real Estate
 
-A responsive real estate marketing homepage for **EDOLARK LTD**, built with Next.js, React and TypeScript. The visual direction uses the supplied red-and-charcoal EDOLARK logo, warm neutrals and editorial typography.
+A multi-page real estate website for **EDOLARK LTD**, built with Next.js 15, React 19 and TypeScript.
+
+## Pages
+
+- **Home** — hero, featured projects, services and contact CTA
+- **About us** — company story, values and office details
+- **Services** — residential sales, development, investment advisory, project marketing and property management
+- **Projects** — present and past developments
+- **Project detail** — each project has its own page with a photo gallery (3–5 images)
+- **Team** — meet the team
+- **Contact** — form, address, phone, WhatsApp, Instagram and email
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev
+npm run typecheck
+npm run build
+npm run start   # production server on :3000
+npm run dev     # development server on :3000
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Checks
+## Google / SEO
 
-```bash
-npm run typecheck
-npm run build
-```
+The site ships with:
 
-## Included
+- Page-level metadata and Open Graph tags
+- `/sitemap.xml` and `/robots.txt`
+- LocalBusiness JSON-LD schema
+- Canonical URLs
 
-- Responsive desktop and mobile navigation
-- Property search by location, type and budget
-- Property-type filters and empty states
-- Saved homes persisted in local storage
-- Property details and enquiry modal
-- General consultation enquiry flow with success feedback
-- Keyboard-accessible controls, visible focus states and reduced-motion support
+To appear on Google you still need to:
 
-Property listings, prices and contact details are sample content and can be replaced in `lib/properties.ts` and `components/edolark-home.tsx`. The enquiry form is a front-end demo and needs an API or CRM connection for production submissions.
+1. Deploy the site to a live domain (e.g. Vercel, Netlify, Hostinger, etc.).
+2. Verify ownership in [Google Search Console](https://search.google.com/search-console).
+3. Submit the sitemap at `https://yourdomain.com/sitemap.xml`.
+
+## Social links
+
+- **Instagram:** https://instagram.com/edolarkltd
+- **WhatsApp:** https://wa.me/2348062125925
+- **Email:** mailto:info@edolarkltd.com
+- **Phone:** +234 806 212 5925
+- **Office:** 1 Ogunyemi Street, Pedro, Gbagada, Lagos State, Nigeria
+
+## Notes
+
+- Replace placeholder team names and photos in `lib/data.ts` before going live.
+- Property/project content, prices and contact details are configured in `lib/data.ts`.
+- The enquiry form is a front-end demo; connect it to your CRM or email API for production submissions.
