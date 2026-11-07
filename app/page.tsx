@@ -28,7 +28,7 @@ export default function Home() {
         <div className="hero__content shell">
           <p className="hero__eyebrow"><span /> {company.slogan}</p>
           <h1 id="hero-title">Quality homes.<br />Lasting value.</h1>
-          <p className="hero__intro">Thoughtfully designed residential developments in Lagos — built for families, investors and everyone ready to own a place they love.</p>
+          <p className="hero__intro">Design, construction and general contract services for residential, commercial and civil projects across Nigeria.</p>
           <Link className="hero__explore" href="/projects">
             Explore our projects <span><ArrowDown size={18} /></span>
           </Link>
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="intro-section__content">
           <h2 id="intro-title">Building homes you&apos;re proud<br />to call <em>yours.</em></h2>
           <div className="intro-section__copy">
-            <p>Edolark Ltd is a Lagos-based real estate company committed to quality construction, transparent processes and homes that hold value for generations.</p>
+            <p>Edolark Limited is a Lagos-based design, construction and general contract outfit delivering quality workmanship for residential, commercial and civil projects.</p>
             <Link className="text-link" href="/about">More about us <ArrowUpRight size={17} /></Link>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="promise-section__content shell">
           <p className="eyebrow eyebrow--light">Now selling</p>
           <blockquote>{featured.summary}</blockquote>
-          <p className="promise-section__detail">{featured.units} at {featured.location}</p>
+          <p className="promise-section__detail">{featured.type} at {featured.location}</p>
           <Link className="round-link" href={`/projects/${featured.slug}`}>
             <span>View<br />project</span><ArrowUpRight size={24} strokeWidth={1.3} />
           </Link>

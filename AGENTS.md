@@ -2,7 +2,7 @@
 
 ## Project Identity
 
-- Name: **EDOLARK LTD** (registration number included in the supplied logo)
+- Name: **EDOLARK LIMITED** (RC 1099055)
 - Primary brand colors: charcoal `#1b1c1b` and EDOLARK red `#d5141b` (derived from the bright red in `public/logo2.jpeg`)
 - Supporting palette: warm paper `#faf9f6`, sand `#f0ede7`, muted `#6c6a65`
 - Typography: DM Sans for UI text, Playfair Display for headings (loaded via `next/font/google`)
@@ -13,7 +13,7 @@
 
 ## Tech Stack
 
-- Next.js 16 App Router
+- Next.js 15 App Router
 - React 19
 - TypeScript
 - Plain CSS in `app/globals.css` (no Tailwind / CSS-in-JS)
@@ -42,12 +42,14 @@ npm run dev         # development server on :3000
 ## Data
 
 - `lib/data.ts` holds company info, projects, services and team members.
-- Project images with spaces in filenames (e.g. `VIEW 1.png`) are encoded with `encodeURI()` when passed to Next `<Image>`.
+- Project data is sourced from the `2026 EDOLARK LTD PROFILE.pptx`.
+- Project images are stored in `public/projects/<project-slug>/` and referenced from `lib/data.ts`.
+- Image paths are encoded with `encodeURI()` when passed to Next `<Image>`.
 - Original supplied logos are `public/logo.jpeg` and `public/logo2.jpeg`; the processed transparent logos are `public/edolark-logo-transparent.png` and `public/edolark-logo-light.png`.
 
 ## Important Notes
 
 - The enquiry form is a front-end demo. Submitting it shows a success state but does not call an API.
-- Property listings, prices, and contact details are sample content. Replace them before production use.
-- The save-heart feature persists IDs in `localStorage` under `edolark-saved`.
+- Projects without supplied photos display the Edolark logo as a placeholder until images are added.
+- Contact details, team bios and project information come from the company profile PowerPoint; verify before production use.
 - The logo is a supplied asset. Keep it in the public folder and do not overwrite `logo.jpeg` / `logo2.jpeg` without confirming with the user.

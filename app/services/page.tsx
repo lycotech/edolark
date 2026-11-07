@@ -1,26 +1,26 @@
 import Link from "next/link";
-import { ArrowUpRight, Building2, Home, KeyRound, Megaphone, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowUpRight, Building2, HardHat, Home, Leaf, Settings, Truck, Wrench } from "lucide-react";
 import { services } from "@/lib/data";
 import { PageHero } from "@/components/page-hero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our services",
-  description: "Explore Edolark Ltd's real estate services — residential sales, property development, investment advisory, project marketing and property management in Lagos.",
+  description: "Explore Edolark Limited's construction and project services — building design, renovation, project management, maintenance, landscaping and procurement in Nigeria.",
   alternates: { canonical: "/services" },
 };
 
-const icons = [Home, Building2, TrendingUp, Megaphone, ShieldCheck];
+const icons = [Building2, Wrench, HardHat, Settings, Leaf, Truck];
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero title="Our services" subtitle="How we help" image="/VIEW 4.png" />
+      <PageHero title="Our services" subtitle="What we do" image="/VIEW 4.png" />
 
       <section className="services-page shell" aria-labelledby="services-list-title">
         <div className="services-page__intro">
-          <p className="eyebrow">End-to-end real estate support</p>
-          <h2 id="services-list-title">Everything you need to buy, build or invest in Lagos property.</h2>
+          <p className="eyebrow">End-to-end construction expertise</p>
+          <h2 id="services-list-title">Everything you need to design, build and maintain quality structures.</h2>
         </div>
         <div className="services-list">
           {services.map((service, index) => {
@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
       <section className="cta-banner" aria-label="Get started">
         <div className="shell">
-          <h2>Not sure which service fits your goal?</h2>
+          <h2>Not sure which service fits your project?</h2>
           <p>Book a free consultation and we will point you in the right direction.</p>
           <Link className="button button--dark" href="/contact">Book a consultation <ArrowUpRight size={18} /></Link>
         </div>

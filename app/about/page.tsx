@@ -7,21 +7,22 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About us",
-  description: "Learn about Edolark Ltd — a Lagos real estate company committed to quality homes, transparent service and lasting value in Nigeria.",
+  description: `Edolark Limited — incorporated ${company.incorporated}, ${company.rcNumber}. A design, construction and general contract outfit delivering quality workmanship across Nigeria.`,
   alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero title="About Edolark Ltd" subtitle="Who we are" image="/VIEW 1.png" />
+      <PageHero title="About Edolark Limited" subtitle="Who we are" image="/VIEW 1.png" />
 
       <section className="about-page shell" aria-labelledby="about-story-title">
         <div className="about-page__intro">
           <p className="eyebrow">Our story</p>
-          <h2 id="about-story-title">Quality homes. Trusted guidance. Lasting value.</h2>
-          <p>Edolark Ltd is a Lagos-based real estate company that designs, builds and sells residential properties people are proud to live in. From first-time buyers to experienced investors, we help clients make confident property decisions in one of Africa&apos;s most dynamic cities.</p>
-          <p>Every Edolark development is shaped by a simple belief: a home should be more than an address. It should be safe, well-built, thoughtfully planned and located where life is easier.</p>
+          <h2 id="about-story-title">A design, construction and general contract outfit built on trust.</h2>
+          <p>Edolark Limited was incorporated on the <strong>{company.incorporated}</strong> and registered in line with the Corporate Affairs Commission Act, 1990 of the Federal Republic of Nigeria with Company Registration Number <strong>{company.rcNumber}</strong>.</p>
+          <p>Our expertise and approach deliver enduring results, true to each client&apos;s specific situation. We are a design, construction and general contract outfit committed to quality workmanship, customer service and the highest level of professionalism in our relationships with customers, employees and vendors.</p>
+          <p>Whether the project is a residential apartment, an office complex, a road works package or a controlled demolition, we invest sufficient time to understand client needs and apply our state-of-the-art knowledge to deliver applicable, creative resolutions.</p>
         </div>
         <div className="about-page__image">
           <Image src={encodeURI("/VIEW 3.png")} alt="Modern Edolark residential building" fill sizes="(max-width: 850px) 100vw, 50vw" />
@@ -31,23 +32,23 @@ export default function AboutPage() {
       <section className="values-section" aria-labelledby="values-title">
         <div className="shell">
           <p className="eyebrow">What drives us</p>
-          <h2 id="values-title">Our values</h2>
+          <h2 id="values-title">Mission, vision & values</h2>
           <div className="values-grid">
             <div className="value-card">
-              <h3><Check size={20} />Quality</h3>
-              <p>We use reliable materials, skilled craftsmen and rigorous supervision so every home stands the test of time.</p>
+              <h3><Check size={20} />Mission</h3>
+              <p>To provide quality workmanship and customer service, and to maintain the highest level of professionalism in our relationships with customers, employees and vendors.</p>
             </div>
             <div className="value-card">
-              <h3><Check size={20} />Integrity</h3>
-              <p>Clear information, honest pricing and no hidden surprises — that is how we build trust with every client.</p>
+              <h3><Check size={20} />Vision</h3>
+              <p>To be a leading source of professional construction services and project management by combining rare professional skills with quality materials to offer excellent engineering structures at reasonable cost and in the earliest possible time.</p>
             </div>
             <div className="value-card">
-              <h3><Check size={20} />Accessibility</h3>
-              <p>We create homes across a range of budgets without compromising on safety, comfort or design.</p>
+              <h3><Check size={20} />Goals</h3>
+              <p>To provide a full range of construction products and services to a wide customer base, grow our business across market sectors, and deliver high-quality projects safely, professionally and on time.</p>
             </div>
             <div className="value-card">
-              <h3><Check size={20} />Community</h3>
-              <p>Our developments are designed to become neighbourhoods — secure, connected and pleasant places to live.</p>
+              <h3><Check size={20} />Our people</h3>
+              <p>Our people are our real asset. With positive attitudes, respect and fairness to all clients, we follow company standards and systems and endeavour to exceed expectations.</p>
             </div>
           </div>
         </div>
@@ -63,7 +64,7 @@ export default function AboutPage() {
           <SocialLinks />
         </div>
         <div className="contact-strip__cta">
-          <p>Have a question about buying, selling or investing?</p>
+          <p>Have a question about a project or service?</p>
           <a className="button button--dark" href={`tel:${company.rawPhone}`}>Call us now</a>
         </div>
       </section>

@@ -2826,6 +2826,61 @@ textarea:focus-visible {
   font-size: 14px;
 }
 
+.project-card__status--completed {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.project-card__status--ongoing {
+  background: #b8860b;
+  color: var(--white);
+}
+
+.project-card__status--executed {
+  background: #4a5568;
+  color: var(--white);
+}
+
+.project-gallery__stage--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sand);
+}
+
+.project-gallery__placeholder {
+  object-fit: contain !important;
+  padding: 40px;
+}
+
+.team-card__role {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.team-card__bio {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.project-info-box__value--small {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.project-info-box__value svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--red);
+}
+
 /* Responsive additions */
 @media (max-width: 1100px) {
   .project-detail-body {

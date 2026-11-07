@@ -4,11 +4,12 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import type { Project } from "@/lib/data";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const cover = project.gallery[0] ?? "/edolark-logo-transparent.png";
   return (
     <article className="project-card">
       <Link href={`/projects/${project.slug}`} className="project-card__image">
         <Image
-          src={encodeURI(project.gallery[0])}
+          src={encodeURI(cover)}
           alt={project.title}
           fill
           sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
