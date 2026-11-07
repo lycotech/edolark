@@ -302,10 +302,10 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Kolade Awoyera",
-    role: "Managing Director",
+    name: "Kolade Olaposi Awoyera",
+    role: "Chief Executive Officer | Edolark Ltd",
     initials: "KA",
-    bio: "Civil Engineer and certified project manager with over 17 years of experience in road and building construction.",
+    bio: "Kolade Olaposi Awoyera is an accomplished Civil Engineer, experienced Project Manager and dynamic business leader with over 13 years of professional experience in Nigeria's construction and real estate industry. As the Chief Executive Officer of Edolark Ltd, he provides strategic leadership and direction, championing the company's commitment to delivering exceptional real estate developments and high-quality construction solutions.\n\nThroughout his career, Kolade has built an impressive portfolio of successful projects, demonstrating extensive expertise in construction management, project planning, engineering coordination, development execution and quality control. His wealth of industry experience, combined with his technical knowledge and practical understanding of the construction sector, enables him to transform concepts and designs into outstanding developments.\n\nAs a member of the Project Management Institute (PMI), Kolade embraces professional project management principles, with a strong focus on efficiency, accountability, cost optimisation, quality assurance and timely project delivery.\n\nAt Edolark Ltd, his leadership is driven by a clear vision: to redefine standards in real estate and construction through innovative thinking, professional excellence and uncompromising commitment to quality. He is passionate about creating properties that offer lasting value to investors, homeowners and communities while contributing to the growth and transformation of Nigeria's built environment.\n\nKolade believes that successful property development goes beyond putting structures on the ground; it is about building trust, creating opportunities and delivering sustainable developments that stand the test of time. His leadership philosophy is founded on integrity, innovation, professionalism and a relentless pursuit of excellence.",
   },
   {
     name: "Olalekan Oginni",
@@ -314,16 +314,22 @@ export const team: TeamMember[] = [
     bio: "Registered Architect with over 14 years of experience in commercial and residential building design, modification and beautification.",
   },
   {
+    name: "Engr. Ekundayo Opeyemi",
+    role: "Structural Consultant Engineer | Managing Partner, Chrestrad Consulting Limited",
+    initials: "EO",
+    bio: "Engr. Ekundayo Opeyemi is a Structural Consultant Engineer with experience in structural design and analysis, foundation engineering, structural integrity assessment, construction supervision, and value engineering.\n\nHe is committed to delivering safe, durable, and cost-effective structural engineering solutions that meet professional standards and client expectations.\n\nHe works collaboratively with architects, developers, contractors, and real estate professionals to provide reliable engineering consultancy services, ensuring structural safety, quality delivery, and value for investment.\n\nProfessional Motto: Engineering Excellence. Building Confidence.",
+  },
+  {
     name: "Aramide Olalekan",
     role: "Civil Engineer",
     initials: "AO",
     bio: "Registered Civil Engineer with over 10 years of experience in structural design and construction of civil engineering structures.",
   },
   {
-    name: "Damola Awoyera",
-    role: "Quantity Surveyor (NIQS)",
+    name: "Awoyera Damola Oluwaseun",
+    role: "Quantity Surveyor | MNIQS, RQS",
     initials: "DA",
-    bio: "Licensed quantity surveyor with over 13 years of vast experience in cost control, management and estimations.",
+    bio: "Awoyera Damola Oluwaseun is a member of the Nigerian Institute of Quantity Surveyors (MNIQS) and the Quantity Surveyors Registration Board of Nigeria (RQS). He is an accomplished Quantity Surveyor with nine years of professional experience in the construction industry, bringing extensive knowledge and expertise in cost management, contract administration, project management, and construction economics. He is a detail-oriented professional with a strong commitment to delivering efficient, cost-effective, and value-driven solutions across construction projects.\n\nThroughout his professional career, he has gained valuable experience working with reputable organisations across different sectors of the construction industry. His career journey began at Sageto Limited, where he undertook his industrial training and developed foundational knowledge of construction practices and quantity surveying procedures. He subsequently worked with Complete Cost Surveyors as an Assistant Quantity Surveyor, gaining practical experience in cost estimation, measurement, documentation, and other essential aspects of quantity surveying.\n\nHe further advanced his career at Lekki Gardens, where he served as a Contract Manager, taking on responsibilities involving contract administration, project coordination, cost control, and the management of construction-related activities. He later joined First Metro Infrastructure Limited as Head of Quantity Surveying, where he further strengthened his leadership, technical, and professional capabilities in managing quantity surveying functions and overseeing cost-related aspects of construction projects.\n\nHis professional expertise covers the preparation of Bills of Quantities (BOQs), preliminary cost estimates, material schedules, valuation reports, and tender reports. He is also experienced in contract administration and project management, with a strong understanding of the financial, contractual, and operational requirements necessary for the successful delivery of construction projects. In addition, he demonstrates proficiency in leveraging modern technology and digital tools for accurate measurement, quantity take-off, and cost assessment.\n\nBeyond his technical capabilities, Awoyera Damola Oluwaseun possesses excellent interpersonal and communication skills, strong analytical abilities, and the capacity to work effectively within multidisciplinary teams. He is guided by the principles of integrity, transparency, and honesty, while maintaining a target-driven approach to professional responsibilities. His ability to combine technical competence with effective coordination and problem-solving makes him a valuable contributor to project delivery.\n\nAt Edolark Ltd, he brings his wealth of experience, professional expertise, and strategic understanding of construction cost management to support the successful execution of projects. His commitment to accuracy, financial accountability, quality service delivery, and effective project management contributes to the firm's pursuit of excellence in the built environment.",
   },
   {
     name: "Sanyaolu Damilola",
