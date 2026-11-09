@@ -1572,7 +1572,7 @@ textarea:focus-visible {
   }
 
   .mobile-nav--open {
-    max-height: 450px;
+    max-height: 520px;
     border-bottom: 1px solid var(--line);
   }
 
@@ -1583,18 +1583,13 @@ textarea:focus-visible {
 
   .mobile-nav a {
     display: grid;
-    grid-template-columns: 34px 1fr auto;
+    grid-template-columns: 1fr auto;
     align-items: center;
+    gap: 12px;
     min-height: 57px;
     border-bottom: 1px solid var(--line);
     font-family: var(--font-serif);
     font-size: 22px;
-  }
-
-  .mobile-nav a span {
-    color: var(--red);
-    font-family: var(--font-sans);
-    font-size: 9px;
   }
 
   .mobile-nav a.active {

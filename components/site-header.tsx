@@ -70,9 +70,9 @@ export function SiteHeader({ onEnquire }: { onEnquire?: () => void }) {
       </div>
       <div id="mobile-navigation" className={`mobile-nav ${menuOpen ? "mobile-nav--open" : ""}`} aria-hidden={!menuOpen}>
         <nav className="shell" aria-label="Mobile navigation">
-          {links.map((link, index) => (
+          {links.map((link) => (
             <Link key={link.href} href={link.href} tabIndex={menuOpen ? undefined : -1} className={isActive(link.href) ? "active" : ""} onClick={() => setMenuOpen(false)}>
-              <span>0{index + 1}</span>{link.label}<ArrowUpRight size={20} />
+              {link.label}<ArrowUpRight size={20} />
             </Link>
           ))}
           {onEnquire ? (
