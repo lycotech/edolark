@@ -66,8 +66,8 @@ export const projects: Project[] = [
     summary: "Premium semi-detached family homes in a well-established Gbagada estate.",
     description:
       "A completed development of 4-bedroom semi-detached residential apartments delivered in Medina Estate, Gbagada. Executed as a joint venture with Mr Jerry Chimezie Eyimuche and completed in 2021, the project reflects Edolark’s commitment to quality workmanship, functional layouts and timely delivery.",
-    client: "Joint Venture with Mr Jerry Chimezie Eyimuche",
-    completedYear: "2021",
+    client: "Joint Venture ",
+    completedYear: "2023",
     features: [
       "4-bedroom semi-detached units",
       "Quality finishes and functional layouts",
