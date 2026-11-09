@@ -33,7 +33,7 @@ export function TeamModal({ member, onClose }: { member: TeamMember; onClose: ()
           </div>
         </div>
         <div className="team-modal__body">
-          {member.bio.split("\\n").map((paragraph, index) =>
+          {member.bio.split(/\n+/).map((paragraph, index) =>
             paragraph.trim() ? <p key={index}>{paragraph.trim()}</p> : null
           )}
         </div>

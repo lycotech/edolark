@@ -2946,6 +2946,8 @@ textarea:focus-visible {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.85;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .team-modal__body p:last-child {
