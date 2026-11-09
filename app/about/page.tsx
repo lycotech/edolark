@@ -17,7 +17,6 @@ export default function AboutPage() {
 
       <section className="about-page shell" aria-labelledby="about-story-title">
         <div className="about-page__intro">
-          <p className="eyebrow">Our story</p>
           <h2 id="about-story-title">A design, construction and general contract outfit built on trust.</h2>
           <p>Edolark Limited was incorporated on the <strong>{company.incorporated}</strong> and registered in line with the Corporate Affairs Commission Act, 1990 of the Federal Republic of Nigeria with Company Registration Number <strong>{company.rcNumber}</strong>.</p>
           <p>Our expertise and approach deliver enduring results, true to each client&apos;s specific situation. We are a design, construction and general contract outfit committed to quality workmanship, customer service and the highest level of professionalism in our relationships with customers, employees and vendors.</p>
@@ -31,15 +30,15 @@ export default function AboutPage() {
           <h2 id="values-title">Mission, vision & values</h2>
           <div className="values-grid">
             <div className="value-card">
-              <h3><Check size={20} />Mission</h3>
+              <h3><Check size={20} />Our mission</h3>
               <p>To provide quality workmanship and customer service, and to maintain the highest level of professionalism in our relationships with customers, employees and vendors.</p>
             </div>
             <div className="value-card">
-              <h3><Check size={20} />Vision</h3>
+              <h3><Check size={20} />Our vision</h3>
               <p>To be a leading source of professional construction services and project management by combining rare professional skills with quality materials to offer excellent engineering structures at reasonable cost and in the earliest possible time.</p>
             </div>
             <div className="value-card">
-              <h3><Check size={20} />Goals</h3>
+              <h3><Check size={20} />Ultimate goal</h3>
               <p>To provide a full range of construction products and services to a wide customer base, grow our business across market sectors, and deliver high-quality projects safely, professionally and on time.</p>
             </div>
             <div className="value-card">
