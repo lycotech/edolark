@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Check, MapPin, Phone, Mail } from "lucide-react";
 import { company } from "@/lib/data";
 import { PageHero } from "@/components/page-hero";
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero title="About Edolark Limited" subtitle="Who we are" image="/VIEW 1.png" />
+      <PageHero title="About Edolark Limited" subtitle="Who we are" image="/img/ivan-henao-04rZ7R1fKhY-unsplash.jpg" />
 
       <section className="about-page shell" aria-labelledby="about-story-title">
         <div className="about-page__intro">
@@ -23,9 +22,6 @@ export default function AboutPage() {
           <p>Edolark Limited was incorporated on the <strong>{company.incorporated}</strong> and registered in line with the Corporate Affairs Commission Act, 1990 of the Federal Republic of Nigeria with Company Registration Number <strong>{company.rcNumber}</strong>.</p>
           <p>Our expertise and approach deliver enduring results, true to each client&apos;s specific situation. We are a design, construction and general contract outfit committed to quality workmanship, customer service and the highest level of professionalism in our relationships with customers, employees and vendors.</p>
           <p>Whether the project is a residential apartment, an office complex, a road works package or a controlled demolition, we invest sufficient time to understand client needs and apply our state-of-the-art knowledge to deliver applicable, creative resolutions.</p>
-        </div>
-        <div className="about-page__image">
-          <Image src={encodeURI("/VIEW 3.png")} alt="Modern Edolark residential building" fill sizes="(max-width: 850px) 100vw, 50vw" />
         </div>
       </section>
 

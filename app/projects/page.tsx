@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero title="Present & past projects" subtitle="Our portfolio" image="/VIEW 5.png" />
+      <PageHero title="Present & past projects" subtitle="Our portfolio" image="/img/maverick-frame-7s8ab4twHcI-unsplash.jpg" />
       <section className="projects-page shell" aria-labelledby="projects-list-title">
         <div className="projects-page__intro">
           <p className="eyebrow">Portfolio</p>

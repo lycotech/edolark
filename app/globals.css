@@ -2441,13 +2441,13 @@ textarea:focus-visible {
 /* About page */
 .about-page {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 70px;
   padding: 100px 0;
 }
 
 .about-page__intro {
-  max-width: 640px;
+  max-width: 820px;
 }
 
 .about-page__intro h2 {

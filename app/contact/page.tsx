@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero title="Contact us" subtitle="Get in touch" image="/VIEW 7.png" />
+      <PageHero title="Contact us" subtitle="Get in touch" image="/img/pexels-ansar-muhammad-380085065-27604148.jpg" />
       <section className="contact-page shell" aria-labelledby="contact-title">
         <div className="contact-page__info">
           <p className="eyebrow">Start a conversation</p>

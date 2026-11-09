@@ -15,7 +15,7 @@ const icons = [Building2, Wrench, HardHat, Settings, Leaf, Truck];
 export default function ServicesPage() {
   return (
     <>
-      <PageHero title="Our services" subtitle="What we do" image="/VIEW 4.png" />
+      <PageHero title="Our services" subtitle="What we do" image="/img/ben-allan-BIeC4YK2MTA-unsplash.jpg" />
 
       <section className="services-page shell" aria-labelledby="services-list-title">
         <div className="services-page__intro">

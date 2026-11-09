@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
-      <PageHero title="Meet the team" subtitle="The people behind Edolark" image="/VIEW 6.png" />
+      <PageHero title="Meet the team" subtitle="The people behind Edolark" image="/img/pexels-gustavo-fring-6285152.jpg" />
       <section className="team-page shell" aria-labelledby="team-list-title">
         <div className="team-page__intro">
           <p className="eyebrow">Our people</p>
