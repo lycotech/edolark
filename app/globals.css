@@ -2602,18 +2602,11 @@ textarea:focus-visible {
 
 .service-row {
   display: grid;
-  grid-template-columns: 70px 70px 1fr;
+  grid-template-columns: 70px 1fr;
   gap: 28px;
   align-items: start;
   padding: 42px 0;
   border-bottom: 1px solid var(--line);
-}
-
-.service-row__number {
-  color: var(--red);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
 }
 
 .service-row__icon {
@@ -3013,7 +3006,7 @@ textarea:focus-visible {
   }
 
   .service-row {
-    grid-template-columns: 50px 50px 1fr;
+    grid-template-columns: 50px 1fr;
     gap: 16px;
     padding: 32px 0;
   }
@@ -3058,7 +3051,6 @@ textarea:focus-visible {
     gap: 10px;
   }
 
-  .service-row__number,
   .service-row__icon {
     margin-bottom: 4px;
   }

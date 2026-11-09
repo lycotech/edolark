@@ -27,7 +27,6 @@ export default function ServicesPage() {
             const Icon = icons[index] || Home;
             return (
               <article className="service-row" key={service.title}>
-                <div className="service-row__number">0{index + 1}</div>
                 <div className="service-row__icon"><Icon size={32} strokeWidth={1.25} /></div>
                 <div className="service-row__body">
                   <h3>{service.title}</h3>

@@ -81,7 +81,7 @@ export default function Home() {
             const Icon = icons[index] || HomeIcon;
             return (
               <article className="service-card" key={service.title}>
-                <div className="service-card__top"><span>0{index + 1}</span><Icon size={29} strokeWidth={1.25} /></div>
+                <div className="service-card__top"><Icon size={29} strokeWidth={1.25} /></div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </article>
