@@ -18,8 +18,8 @@ export default function Home() {
       <section className="hero" id="top" aria-labelledby="hero-title">
         <Image
           className="hero__image"
-          src={encodeURI("/VIEW 1.png")}
-          alt="USI-ADERUN & ANNIE COURT residential development in Yaba, Lagos"
+          src={encodeURI("/img/pexels-ansar-muhammad-380085065-27604148.jpg")}
+          alt="Modern residential architecture"
           fill
           priority
           sizes="100vw"
