@@ -261,7 +261,6 @@ export const projects: Project[] = [
       "Blockwork and site infrastructure",
     ],
     gallery: [
-      "/projects/nsitf-makurdi/1.jpg",
       "/projects/nsitf-makurdi/2.jpg",
       "/projects/nsitf-makurdi/3.jpg",
       "/projects/nsitf-makurdi/4.jpg",
@@ -459,12 +458,6 @@ export const team: TeamMember[] = [
     role: "Quantity Surveyor | MNIQS, RQS",
     initials: "DA",
     bio: "Awoyera Damola Oluwaseun is a member of the Nigerian Institute of Quantity Surveyors (MNIQS) and the Quantity Surveyors Registration Board of Nigeria (RQS). He is an accomplished Quantity Surveyor with nine years of professional experience in the construction industry, bringing extensive knowledge and expertise in cost management, contract administration, project management, and construction economics. He is a detail-oriented professional with a strong commitment to delivering efficient, cost-effective, and value-driven solutions across construction projects.\n\nThroughout his professional career, he has gained valuable experience working with reputable organisations across different sectors of the construction industry. His career journey began at Sageto Limited, where he undertook his industrial training and developed foundational knowledge of construction practices and quantity surveying procedures. He subsequently worked with Complete Cost Surveyors as an Assistant Quantity Surveyor, gaining practical experience in cost estimation, measurement, documentation, and other essential aspects of quantity surveying.\n\nHe further advanced his career at Lekki Gardens, where he served as a Contract Manager, taking on responsibilities involving contract administration, project coordination, cost control, and the management of construction-related activities. He later joined First Metro Infrastructure Limited as Head of Quantity Surveying, where he further strengthened his leadership, technical, and professional capabilities in managing quantity surveying functions and overseeing cost-related aspects of construction projects.\n\nHis professional expertise covers the preparation of Bills of Quantities (BOQs), preliminary cost estimates, material schedules, valuation reports, and tender reports. He is also experienced in contract administration and project management, with a strong understanding of the financial, contractual, and operational requirements necessary for the successful delivery of construction projects. In addition, he demonstrates proficiency in leveraging modern technology and digital tools for accurate measurement, quantity take-off, and cost assessment.\n\nBeyond his technical capabilities, Awoyera Damola Oluwaseun possesses excellent interpersonal and communication skills, strong analytical abilities, and the capacity to work effectively within multidisciplinary teams. He is guided by the principles of integrity, transparency, and honesty, while maintaining a target-driven approach to professional responsibilities. His ability to combine technical competence with effective coordination and problem-solving makes him a valuable contributor to project delivery.\n\nAt Edolark Ltd, he brings his wealth of experience, professional expertise, and strategic understanding of construction cost management to support the successful execution of projects. His commitment to accuracy, financial accountability, quality service delivery, and effective project management contributes to the firm's pursuit of excellence in the built environment.",
-  },
-  {
-    name: "Sanyaolu Damilola",
-    role: "Accountant",
-    initials: "SD",
-    bio: "Chartered Accountant with 3 years of robust experience in auditing, certification and negotiation.",
   },
 ];
 
