@@ -2220,7 +2220,7 @@ html.has-cursor textarea {
   background: linear-gradient(180deg, rgba(13, 14, 13, 0.25), rgba(13, 14, 13, 0.1));
 }
 .numbers {
-  padding-bottom: 0;
+  padding-bottom: clamp(80px, 11vw, 170px);
 }
 .numbers .stats {
   margin-top: 0;
@@ -3101,5 +3101,58 @@ a.ccard:hover .ccard__arrow {
   }
   .scroll-fill span {
     opacity: 1;
+  }
+}
+
+/* ---------- about: philosophy quote + expertise ---------- */
+.band__quote {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+.band__quote p {
+  max-width: 1000px;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.6vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+.band__veil {
+  background: linear-gradient(90deg, rgba(13, 14, 13, 0.82), rgba(13, 14, 13, 0.35));
+}
+.expertise__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+.expertise__note {
+  max-width: 420px;
+  margin-top: 28px;
+  color: var(--muted);
+}
+.expertise__list {
+  border-top: 1px solid var(--line);
+}
+.expertise__list li {
+  border-bottom: 1px solid var(--line);
+}
+.expertise__list li > div {
+  padding: 22px 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.1;
+  transition: padding 0.5s var(--ease), color 0.3s;
+}
+.expertise__list li:hover > div {
+  padding-left: 18px;
+  color: var(--red);
+}
+@media (max-width: 900px) {
+  .expertise__grid {
+    grid-template-columns: 1fr;
   }
 }

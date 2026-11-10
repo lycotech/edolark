@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { approach, company, credentials, portfolioStates, projects, services, values, welcomeMessage } from "@/lib/data";
+import { company, credentials, expertise, portfolioStates, projects, services, values } from "@/lib/data";
 import { PageHero } from "@/components/page-hero";
 import { SocialLinks } from "@/components/social-links";
 import { Counter, Magnetic, Parallax, Reveal, ScrollFill, SplitText } from "@/components/motion";
@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About us",
-  description: `Edolark Limited — incorporated ${company.incorporated}, ${company.rcNumber}. A design, construction and general contract outfit delivering quality workmanship across Nigeria.`,
+  description: `Edolark Limited is a Nigerian real estate, construction and property development company — incorporated ${company.incorporated}, ${company.rcNumber}. Building Excellence. Creating Value. Shaping the Future.`,
   alternates: { canonical: "/about" },
 };
 
@@ -18,7 +18,12 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero title={"About\n*Edolark Limited*"} subtitle="Who we are" image="/img/ivan-henao-04rZ7R1fKhY-unsplash.jpg" />
+      <PageHero
+        title={"About\n*Edolark Limited*"}
+        subtitle="Who we are"
+        image="/img/ivan-henao-04rZ7R1fKhY-unsplash.jpg"
+        intro="Building Excellence. Creating Value. Shaping the Future."
+      />
 
       <section className="story section shell" aria-labelledby="about-story-title">
         <div className="story__grid">
@@ -26,31 +31,64 @@ export default function AboutPage() {
             <Reveal><p className="eyebrow">Our story</p></Reveal>
           </div>
           <div className="story__body">
-            <SplitText id="about-story-title" text={"A design, construction and general contract outfit *built on trust.*"} />
+            <SplitText id="about-story-title" text={"Building excellence. *Creating value.*"} />
             <ScrollFill
               className="story__lead"
-              text={`Edolark Limited was incorporated on the ${company.incorporated} and registered in line with the Corporate Affairs Commission Act, 1990 of the Federal Republic of Nigeria with Company Registration Number ${company.rcNumber}.`}
+              text="Edolark Limited is a Nigerian real estate, construction and property development company committed to delivering innovative, sustainable and value-driven solutions across the built environment."
             />
             <div className="story__cols">
               <Reveal>
-                <p>Our expertise and approach deliver enduring results, true to each client&apos;s specific situation. We are a design, construction and general contract outfit committed to quality workmanship, customer service and the highest level of professionalism in our relationships with customers, employees and vendors.</p>
+                <p>Incorporated on {company.incorporated} and registered under the Corporate Affairs Commission of the Federal Republic of Nigeria, in accordance with the Companies and Allied Matters Act, with Registration Number {company.rcNumber}, Edolark has established its presence in the industry through its commitment to quality workmanship, professional excellence and client satisfaction.</p>
               </Reveal>
               <Reveal delay={120}>
-                <p>Whether the project is a residential apartment, an office complex, a road works package or a controlled demolition, we invest sufficient time to understand client needs and apply our state-of-the-art knowledge to deliver applicable, creative resolutions.</p>
+                <p>Our expertise spans residential and commercial property development, building construction, civil engineering, architectural design coordination, project management and general contracting. We approach every assignment with a clear understanding that each client, project and development opportunity comes with unique requirements — which drives our ability to develop practical, innovative and commercially viable solutions that deliver enduring value.</p>
+              </Reveal>
+              <Reveal>
+                <p>We believe that successful projects are built on more than technical competence. They require integrity, collaboration, attention to detail and an unwavering commitment to excellence. We therefore invest the time, knowledge and resources necessary to understand our clients&apos; objectives, assess project requirements and deliver solutions that align with their expectations.</p>
+              </Reveal>
+              <Reveal delay={120}>
+                <p>Whether delivering a residential apartment, developing a commercial office complex, executing road infrastructure works or undertaking specialised projects such as controlled demolition, we bring together professional expertise, modern construction knowledge and a results-oriented approach to every engagement.</p>
               </Reveal>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="band" aria-hidden="true">
+      <section className="band" aria-label="Our philosophy">
         <Parallax className="band__media" speed={0.2}>
           <Image src="/projects/medina-gbagada/19.jpeg" alt="" fill sizes="100vw" />
         </Parallax>
         <div className="band__veil" />
+        <div className="band__quote shell">
+          <SplitText
+            as="p"
+            text={"We do not simply build structures; we create *lasting value,* develop opportunities and shape environments where people and businesses can thrive."}
+          />
+        </div>
       </section>
 
-      <section className="numbers section shell" aria-label="Edolark in numbers">
+      <section className="expertise section shell" aria-labelledby="expertise-title">
+        <div className="expertise__grid">
+          <div>
+            <Reveal><p className="eyebrow">Our expertise</p></Reveal>
+            <SplitText id="expertise-title" text={"What we bring\nto every *assignment.*"} />
+            <Reveal delay={150}>
+              <p className="expertise__note">Our relationships with clients, employees, consultants, contractors and vendors are founded on mutual respect, transparency and professionalism.</p>
+            </Reveal>
+          </div>
+          <ul className="expertise__list">
+            {expertise.map((item, i) => (
+              <li key={item}>
+                <Reveal delay={i * 70}>
+                  <span>{item}</span>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="numbers shell" aria-label="Edolark in numbers">
         <div className="stats stats--light">
           {[
             { value: years, suffix: "+", label: "Years in business" },
@@ -69,7 +107,7 @@ export default function AboutPage() {
       <section className="values section section--dark" aria-labelledby="values-title">
         <div className="shell">
           <Reveal><p className="eyebrow eyebrow--light">What drives us</p></Reveal>
-          <SplitText id="values-title" text={"Mission, vision\n*& values*"} />
+          <SplitText id="values-title" text={"Vision, mission\n*& ultimate goal*"} />
           <Reveal delay={150}>
             <ValuesTabs values={values} />
           </Reveal>
@@ -79,12 +117,10 @@ export default function AboutPage() {
       <section className="approach section shell" aria-labelledby="approach-title">
         <div className="approach__grid">
           <div>
-            <Reveal><p className="eyebrow">{approach.title}</p></Reveal>
-            <SplitText id="approach-title" text={"Dedicated to your\n*project's success.*"} />
+            <Reveal><p className="eyebrow">Registered &amp; accountable</p></Reveal>
+            <SplitText id="approach-title" text={"A company you can\n*stand behind.*"} />
           </div>
           <div className="approach__copy">
-            <Reveal><p className="approach__lead">{welcomeMessage}</p></Reveal>
-            <Reveal delay={120}><p>{approach.text}</p></Reveal>
             <ul className="credlist">
               {credentials.map((item, i) => (
                 <li key={item}>

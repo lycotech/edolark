@@ -99,7 +99,7 @@ export default function Home() {
         </Reveal>
         <ScrollFill
           className="statement__text"
-          text="Edolark Limited is a Lagos-based design, construction and general contract outfit delivering quality workmanship for residential, commercial and civil projects — built on trust, delivered on time."
+          text="Edolark Limited is a Nigerian real estate, construction and property development company delivering innovative, sustainable and value-driven solutions across the built environment."
         />
         <Reveal>
           <Link className="link-arrow" href="/about">

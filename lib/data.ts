@@ -456,21 +456,26 @@ export const approach = {
 
 export const values = [
   {
-    title: "Our mission",
-    text: "To provide quality workmanship and customer service, and to maintain the highest level of professionalism in our relationships with customers, employees and vendors.",
-  },
-  {
     title: "Our vision",
-    text: "To be a leading source of professional construction services and project management by combining rare professional skills with quality materials to offer excellent engineering structures at reasonable cost and in the earliest possible time.",
+    text: "To become a leading and trusted name in Nigeria's real estate and construction industry, recognised for innovation, exceptional project delivery, sustainable development and the creation of enduring value.",
   },
   {
-    title: "Ultimate goal",
-    text: "To provide a full range of construction products and services to a wide customer base, grow our business across market sectors, and deliver high-quality projects safely, professionally and on time.",
+    title: "Our mission",
+    text: "To deliver superior real estate, construction and engineering solutions through technical expertise, innovative thinking, quality workmanship and professional service, while consistently exceeding client expectations and contributing positively to the development of our communities.",
   },
   {
-    title: "Our people",
-    text: "Our people are our real asset. With positive attitudes, respect and fairness to all clients, we follow company standards and systems and endeavour to exceed expectations.",
+    title: "Our ultimate goal",
+    text: "To build more than structures; to create landmarks, unlock investment opportunities, transform communities and establish a legacy of excellence that stands the test of time.",
   },
+];
+
+export const expertise = [
+  "Residential & commercial property development",
+  "Building construction",
+  "Civil engineering",
+  "Architectural design coordination",
+  "Project management",
+  "General contracting",
 ];
 
 export const equipment = [
@@ -485,7 +490,7 @@ export const equipment = [
 
 export const credentials = [
   `Incorporated ${company.incorporated}`,
-  `Registered in line with the Corporate Affairs Commission Act, 1990 — ${company.rcNumber}`,
+  `Registered with the Corporate Affairs Commission under the Companies and Allied Matters Act — ${company.rcNumber}`,
   "All statutory obligations satisfied",
 ];
 
