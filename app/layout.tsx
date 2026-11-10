@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { Cursor, FloatingActions, Preloader, ScrollProgress } from "@/components/chrome";
 import { company } from "@/lib/data";
 import "./globals.css";
 
@@ -11,11 +12,16 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const serif = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
 });
+
+/* Runs before first paint: enables the scroll animations and skips the intro on repeat visits. */
+const bootScript = `document.documentElement.classList.add("js");try{if(sessionStorage.getItem("edo-intro"))document.documentElement.classList.add("seen")}catch(e){}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.website),
@@ -75,13 +81,20 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} ${playfair.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+      </head>
+      <body className={`${dmSans.variable} ${serif.variable}`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a className="skip-link" href="#main-content">Skip to content</a>
+        <Preloader />
+        <ScrollProgress />
+        <Cursor />
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <FloatingActions />
       </body>
     </html>
   );

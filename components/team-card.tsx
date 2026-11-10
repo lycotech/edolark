@@ -1,30 +1,45 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import type { TeamMember } from "@/lib/data";
 import { TeamModal } from "./team-modal";
 
 export function TeamCard({ member }: { member: TeamMember }) {
   const [open, setOpen] = useState(false);
-  const preview = member.bio.length <= 180 ? member.bio : `${member.bio.slice(0, 180).trim()}...`;
+  const [title, ...rest] = member.role.split("|").map((part) => part.trim());
+  const sub = rest.join(" · ");
+  const preview = member.bio.split("\n")[0];
+  const short = preview.length <= 170 ? preview : `${preview.slice(0, 170).trim()}…`;
 
   return (
     <>
       <article
-        className="team-card"
+        className="tcard"
         onClick={() => setOpen(true)}
-        onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setOpen(true); } }}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setOpen(true);
+          }
+        }}
         role="button"
         tabIndex={0}
         aria-label={`Read ${member.name}'s profile`}
+        data-cursor="Read"
       >
-        <div className="team-card__avatar" aria-hidden="true">
+        <div className="tcard__mono" aria-hidden="true">
           <span>{member.initials}</span>
         </div>
-        <h3>{member.name}</h3>
-        <p className="team-card__role">{member.role}</p>
-        <p className="team-card__bio">{preview}</p>
-        <span className="team-card__cta">Read full profile</span>
+        <div className="tcard__body">
+          <h3>{member.name}</h3>
+          <p className="tcard__role">{title}</p>
+          {sub && <p className="tcard__sub">{sub}</p>}
+          <p className="tcard__bio">{short}</p>
+          <span className="tcard__cta">
+            Read profile <ArrowUpRight size={16} />
+          </span>
+        </div>
       </article>
       {open && <TeamModal member={member} onClose={() => setOpen(false)} />}
     </>

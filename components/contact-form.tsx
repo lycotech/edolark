@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,47 +13,58 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="form-success form-success--boxed" role="status">
-        <span><Check size={28} /></span>
+      <div className="form-success" role="status">
+        <svg viewBox="0 0 52 52" aria-hidden="true">
+          <circle cx="26" cy="26" r="24" />
+          <path d="M14 27l8 8 16-17" />
+        </svg>
         <p className="eyebrow">Message received</p>
-        <h2>Thank you. We&apos;ll be in touch.</h2>
+        <h2>Thank you. We&apos;ll be in <em>touch.</em></h2>
         <p>An EDOLARK advisor will contact you shortly.</p>
       </div>
     );
   }
 
   return (
-    <form className="enquiry-form enquiry-form--page" onSubmit={submit}>
-      <div className="form-row">
-        <div className="form-field">
+    <form className="form" onSubmit={submit}>
+      <div className="form__row">
+        <div className="field">
+          <input id="contact-name" name="name" type="text" autoComplete="name" placeholder=" " required />
           <label htmlFor="contact-name">Full name</label>
-          <input id="contact-name" name="name" type="text" autoComplete="name" placeholder="Your name" required />
+          <span className="field__bar" />
         </div>
-        <div className="form-field">
+        <div className="field">
+          <input id="contact-phone" name="phone" type="tel" autoComplete="tel" placeholder=" " required />
           <label htmlFor="contact-phone">Phone number</label>
-          <input id="contact-phone" name="phone" type="tel" autoComplete="tel" placeholder="+234 000 000 0000" required />
+          <span className="field__bar" />
         </div>
       </div>
-      <div className="form-field">
+      <div className="field">
+        <input id="contact-email" name="email" type="email" autoComplete="email" placeholder=" " required />
         <label htmlFor="contact-email">Email address</label>
-        <input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
+        <span className="field__bar" />
       </div>
-      <div className="form-field">
-        <label htmlFor="contact-interest">I am interested in</label>
+      <div className="field field--select">
         <select id="contact-interest" name="interest" defaultValue="">
           <option value="" disabled>Select an option</option>
           <option value="buy">Buying a home</option>
           <option value="sell">Selling a property</option>
           <option value="invest">Investment opportunities</option>
+          <option value="build">Design &amp; construction</option>
           <option value="project">A specific project</option>
           <option value="other">Something else</option>
         </select>
+        <label htmlFor="contact-interest">I am interested in</label>
+        <span className="field__bar" />
       </div>
-      <div className="form-field">
+      <div className="field">
+        <textarea id="contact-message" name="message" rows={4} placeholder=" " />
         <label htmlFor="contact-message">How can we help?</label>
-        <textarea id="contact-message" name="message" rows={4} placeholder="Tell us what you're looking for..." />
+        <span className="field__bar" />
       </div>
-      <button className="button button--dark form-submit" type="submit">Send message <ArrowRight size={18} /></button>
+      <button className="btn btn--red form__submit" type="submit">
+        Send message <ArrowRight size={18} />
+      </button>
       <small>By submitting, you agree to be contacted about your enquiry.</small>
     </form>
   );

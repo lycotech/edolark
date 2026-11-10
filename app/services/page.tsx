@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { ArrowUpRight, Building2, HardHat, Home, Leaf, Settings, Truck, Wrench } from "lucide-react";
-import { services } from "@/lib/data";
+import { ArrowUpRight } from "lucide-react";
+import { approach, equipment, services } from "@/lib/data";
 import { PageHero } from "@/components/page-hero";
+import { Magnetic, Reveal, SplitText } from "@/components/motion";
+import { ServicesList } from "@/components/services-list";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,39 +12,59 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 
-const icons = [Building2, Wrench, HardHat, Settings, Leaf, Truck];
-
 export default function ServicesPage() {
   return (
     <>
-      <PageHero title="Our services" subtitle="What we do" image="/img/ben-allan-BIeC4YK2MTA-unsplash.jpg" />
+      <PageHero
+        title={"Our\n*services*"}
+        subtitle="What we do"
+        image="/img/ben-allan-BIeC4YK2MTA-unsplash.jpg"
+        intro="End-to-end construction expertise — from the first drawing to a maintained, lasting structure."
+      />
 
-      <section className="services-page shell" aria-labelledby="services-list-title">
-        <div className="services-page__intro">
-          <p className="eyebrow">End-to-end construction expertise</p>
-          <h2 id="services-list-title">Everything you need to design, build and maintain quality structures.</h2>
-        </div>
-        <div className="services-list">
-          {services.map((service, index) => {
-            const Icon = icons[index] || Home;
-            return (
-              <article className="service-row" key={service.title}>
-                <div className="service-row__icon"><Icon size={32} strokeWidth={1.25} /></div>
-                <div className="service-row__body">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              </article>
-            );
-          })}
+      <section className="services-page section shell" aria-labelledby="services-list-title">
+        <div className="services-page__grid">
+          <div className="services-page__intro">
+            <Reveal><p className="eyebrow">End-to-end construction expertise</p></Reveal>
+            <SplitText id="services-list-title" text={"Everything you need to design, build and *maintain.*"} />
+            <Reveal delay={150}><p>{approach.text}</p></Reveal>
+          </div>
+          <Reveal delay={100}>
+            <ServicesList services={services} />
+          </Reveal>
         </div>
       </section>
 
-      <section className="cta-banner" aria-label="Get started">
+      <section className="equip section section--sand" aria-labelledby="svc-equip-title">
         <div className="shell">
-          <h2>Not sure which service fits your project?</h2>
-          <p>Book a free consultation and we will point you in the right direction.</p>
-          <Link className="button button--dark" href="/contact">Book a consultation <ArrowUpRight size={18} /></Link>
+          <div className="section-head">
+            <div>
+              <Reveal><p className="eyebrow">Our equipment</p></Reveal>
+              <SplitText id="svc-equip-title" text={"What we bring\n*to site.*"} />
+            </div>
+          </div>
+          <div className="equip__grid">
+            {equipment.map((item, i) => (
+              <Reveal key={item.name} delay={(i % 4) * 80} className="equip__item">
+                <p className="equip__qty">{item.quantity}</p>
+                <p className="equip__name">{item.name}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="cta section section--dark grain" aria-label="Get started">
+        <div className="shell cta__inner">
+          <Reveal><p className="eyebrow eyebrow--light">Get started</p></Reveal>
+          <SplitText as="h2" className="cta__title" text={"Not sure which service *fits* your project?"} />
+          <Reveal delay={200} className="cta__actions">
+            <Magnetic>
+              <Link className="btn btn--red btn--lg" href="/contact">
+                Talk to us <ArrowUpRight size={20} />
+              </Link>
+            </Magnetic>
+          </Reveal>
         </div>
       </section>
     </>

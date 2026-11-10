@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "Completed and delivered on schedule",
     ],
     gallery: [
-      "/projects/medina-gbagada/18.jpeg",
+      "/projects/medina-gbagada/19.jpeg",
       "/projects/medina-gbagada/14.jpeg",
       "/projects/medina-gbagada/1.jpeg",
       "/projects/medina-gbagada/2.jpeg",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "/projects/medina-gbagada/15.jpeg",
       "/projects/medina-gbagada/16.jpeg",
       "/projects/medina-gbagada/17.jpeg",
-      "/projects/medina-gbagada/19.jpeg",
+      "/projects/medina-gbagada/18.jpeg",
       "/projects/medina-gbagada/20.jpeg",
       "/projects/medina-gbagada/21.jpeg",
     ],
@@ -169,7 +169,18 @@ export const projects: Project[] = [
       "Modern kitchen and living spaces",
       "Upscale Ikoyi location",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/ikoyi-remodel/1.jpg",
+      "/projects/ikoyi-remodel/2.jpg",
+      "/projects/ikoyi-remodel/3.jpg",
+      "/projects/ikoyi-remodel/4.jpg",
+      "/projects/ikoyi-remodel/5.jpg",
+      "/projects/ikoyi-remodel/6.jpg",
+      "/projects/ikoyi-remodel/7.jpg",
+      "/projects/ikoyi-remodel/8.jpg",
+      "/projects/ikoyi-remodel/9.jpg",
+      "/projects/ikoyi-remodel/10.jpg",
+    ],
   },
   {
     slug: "palms-gardens-osogbo",
@@ -187,7 +198,16 @@ export const projects: Project[] = [
       "Completed to client specification",
       "Quality construction and finishes",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/palms-osogbo/1.jpg",
+      "/projects/palms-osogbo/2.jpg",
+      "/projects/palms-osogbo/3.jpg",
+      "/projects/palms-osogbo/4.jpg",
+      "/projects/palms-osogbo/5.jpg",
+      "/projects/palms-osogbo/6.jpg",
+      "/projects/palms-osogbo/7.jpg",
+      "/projects/palms-osogbo/8.jpg",
+    ],
   },
   {
     slug: "horizon-extension-demolition",
@@ -205,7 +225,12 @@ export const projects: Project[] = [
       "Executed within budget",
       "Site clearance and rubble removal",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/horizon-demolition/1.jpg",
+      "/projects/horizon-demolition/2.jpg",
+      "/projects/horizon-demolition/3.jpg",
+      "/projects/horizon-demolition/4.jpg",
+    ],
   },
   {
     slug: "nsitf-office-complex-makurdi",
@@ -223,7 +248,17 @@ export const projects: Project[] = [
       "Foundation and structural works",
       "Blockwork and site infrastructure",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/nsitf-makurdi/1.jpg",
+      "/projects/nsitf-makurdi/2.jpg",
+      "/projects/nsitf-makurdi/3.jpg",
+      "/projects/nsitf-makurdi/4.jpg",
+      "/projects/nsitf-makurdi/5.jpg",
+      "/projects/nsitf-makurdi/6.jpg",
+      "/projects/nsitf-makurdi/7.jpg",
+      "/projects/nsitf-makurdi/8.jpg",
+      "/projects/nsitf-makurdi/9.jpg",
+    ],
   },
   {
     slug: "alara-street-sabo",
@@ -242,7 +277,25 @@ export const projects: Project[] = [
       "Reinforced concrete structure",
       "Roofing, plastering and finishing works",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/alara-sabo/1.jpg",
+      "/projects/alara-sabo/2.jpg",
+      "/projects/alara-sabo/3.jpg",
+      "/projects/alara-sabo/4.jpg",
+      "/projects/alara-sabo/5.jpg",
+      "/projects/alara-sabo/6.jpg",
+      "/projects/alara-sabo/7.jpg",
+      "/projects/alara-sabo/8.jpg",
+      "/projects/alara-sabo/9.jpg",
+      "/projects/alara-sabo/10.jpg",
+      "/projects/alara-sabo/11.jpg",
+      "/projects/alara-sabo/12.jpg",
+      "/projects/alara-sabo/13.jpg",
+      "/projects/alara-sabo/14.jpg",
+      "/projects/alara-sabo/15.jpg",
+      "/projects/alara-sabo/16.jpg",
+      "/projects/alara-sabo/17.jpg",
+    ],
   },
   {
     slug: "itanrin-ijebu-ode",
@@ -260,7 +313,15 @@ export const projects: Project[] = [
       "Substructure to finishing",
       "Roof installation and painting works",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/itanrin-ijebu-ode/1.jpg",
+      "/projects/itanrin-ijebu-ode/2.jpg",
+      "/projects/itanrin-ijebu-ode/3.jpg",
+      "/projects/itanrin-ijebu-ode/4.jpg",
+      "/projects/itanrin-ijebu-ode/5.jpg",
+      "/projects/itanrin-ijebu-ode/6.jpg",
+      "/projects/itanrin-ijebu-ode/7.jpg",
+    ],
   },
   {
     slug: "makoko-paving-stones",
@@ -279,7 +340,15 @@ export const projects: Project[] = [
       "Levelling and compaction",
       "Finished paving stone surface",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/makoko-paving/1.jpg",
+      "/projects/makoko-paving/2.jpg",
+      "/projects/makoko-paving/3.jpg",
+      "/projects/makoko-paving/4.jpg",
+      "/projects/makoko-paving/5.jpg",
+      "/projects/makoko-paving/6.jpg",
+      "/projects/makoko-paving/7.jpg",
+    ],
   },
   {
     slug: "lagos-island-demolition",
@@ -297,7 +366,10 @@ export const projects: Project[] = [
       "Safe dismantling and rubble cart-away",
       "Site clearance",
     ],
-    gallery: [],
+    gallery: [
+      "/projects/lagos-island-demolition/1.jpg",
+      "/projects/lagos-island-demolition/2.jpg",
+    ],
   },
 ];
 
@@ -373,3 +445,57 @@ export const team: TeamMember[] = [
     bio: "Chartered Accountant with 3 years of robust experience in auditing, certification and negotiation.",
   },
 ];
+
+export const welcomeMessage =
+  "We are dedicated to helping you successfully manage your projects in order to achieve your business and project goals — providing solutions that improve outcomes and drive value for your organisation, your customers and your collaborative partners.";
+
+export const approach = {
+  title: "Our approach",
+  text: "Our results are accomplished by working closely with our clients, investing sufficient time to understand their needs, and applying state-of-the-art knowledge and expertise to render applicable, creative resolutions.",
+};
+
+export const values = [
+  {
+    title: "Our mission",
+    text: "To provide quality workmanship and customer service, and to maintain the highest level of professionalism in our relationships with customers, employees and vendors.",
+  },
+  {
+    title: "Our vision",
+    text: "To be a leading source of professional construction services and project management by combining rare professional skills with quality materials to offer excellent engineering structures at reasonable cost and in the earliest possible time.",
+  },
+  {
+    title: "Ultimate goal",
+    text: "To provide a full range of construction products and services to a wide customer base, grow our business across market sectors, and deliver high-quality projects safely, professionally and on time.",
+  },
+  {
+    title: "Our people",
+    text: "Our people are our real asset. With positive attitudes, respect and fairness to all clients, we follow company standards and systems and endeavour to exceed expectations.",
+  },
+];
+
+export const equipment = [
+  { name: "Cutting machines", quantity: "2" },
+  { name: "Concrete mixer", quantity: "1" },
+  { name: "Scaffolding pipes", quantity: "400 pcs" },
+  { name: "Acrow pipes", quantity: "287 pcs" },
+  { name: "Concrete vibrators", quantity: "2" },
+  { name: "Levelling instrument", quantity: "1" },
+  { name: "Generator", quantity: "7.5 KVA" },
+];
+
+export const credentials = [
+  `Incorporated ${company.incorporated}`,
+  `Registered in line with the Corporate Affairs Commission Act, 1990 — ${company.rcNumber}`,
+  "All statutory obligations satisfied",
+];
+
+/** Distinct Nigerian states/territories represented in the portfolio. */
+export function portfolioStates() {
+  const set = new Set(
+    projects.map((p) => {
+      const last = p.location.split(",").pop()!.trim().replace(/ State$/i, "");
+      return last;
+    })
+  );
+  return set.size;
+}

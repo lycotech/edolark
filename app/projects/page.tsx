@@ -1,28 +1,34 @@
 import { projects } from "@/lib/data";
 import { PageHero } from "@/components/page-hero";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsExplorer } from "@/components/projects-explorer";
+import { Reveal, SplitText } from "@/components/motion";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "View present and past Edolark Ltd residential projects in Lagos, including USI-ADERUN & ANNIE COURT in Yaba.",
+  description: "View present and past Edolark Ltd projects — residential developments, remodels, civil works and demolition across Nigeria.",
   alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero title="Present & past projects" subtitle="Our portfolio" image="/img/maverick-frame-7s8ab4twHcI-unsplash.jpg" />
-      <section className="projects-page shell" aria-labelledby="projects-list-title">
-        <div className="projects-page__intro">
-          <p className="eyebrow">Portfolio</p>
-          <h2 id="projects-list-title">Developments built with care.</h2>
+      <PageHero
+        title={"Present &\n*past projects*"}
+        subtitle="Our portfolio"
+        image="/img/maverick-frame-7s8ab4twHcI-unsplash.jpg"
+      />
+      <section className="projects-page section shell" aria-labelledby="projects-list-title">
+        <div className="section-head">
+          <div>
+            <Reveal><p className="eyebrow">Portfolio</p></Reveal>
+            <SplitText id="projects-list-title" text={"Developments built\n*with care.*"} />
+          </div>
+          <Reveal delay={150}>
+            <p className="section-head__note">{projects.length} projects across residential, remodelling, civil and demolition works.</p>
+          </Reveal>
         </div>
-        <div className="project-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
+        <ProjectsExplorer projects={projects} />
       </section>
     </>
   );

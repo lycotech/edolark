@@ -6,14 +6,9 @@ type LogoProps = {
   onClick?: () => void;
 };
 
-export function Logo({ light = false, onClick }: LogoProps) {
+export function Logo({ light = true, onClick }: LogoProps) {
   return (
-    <Link
-      href="#top"
-      className={`logo ${light ? "logo--light" : ""}`}
-      aria-label="EDOLARK home"
-      onClick={onClick}
-    >
+    <Link href="/" className="logo" aria-label="EDOLARK home" onClick={onClick}>
       <Image
         className="logo__image"
         src={light ? "/edolark-logo-light.png" : "/edolark-logo-transparent.png"}
