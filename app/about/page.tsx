@@ -27,9 +27,6 @@ export default function AboutPage() {
 
       <section className="story section shell" aria-labelledby="about-story-title">
         <div className="story__grid">
-          <div className="story__label">
-            <Reveal><p className="eyebrow">Our story</p></Reveal>
-          </div>
           <div className="story__body">
             <SplitText id="about-story-title" text={"Building excellence. *Creating value.*"} />
             <ScrollFill

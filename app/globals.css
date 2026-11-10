@@ -2188,8 +2188,7 @@ html.has-cursor textarea {
    ===================================================================== */
 .story__grid {
   display: grid;
-  grid-template-columns: 0.4fr 1.6fr;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr);
 }
 .story__lead {
   margin: 44px 0 50px;
@@ -3155,4 +3154,7 @@ a.ccard:hover .ccard__arrow {
   .expertise__grid {
     grid-template-columns: 1fr;
   }
+}
+.band__quote em {
+  color: var(--red-hot);
 }
