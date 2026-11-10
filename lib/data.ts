@@ -64,9 +64,9 @@ export const projects: Project[] = [
       "/projects/usiannie-yaba/12.jpg",
       "/projects/usiannie-yaba/13.jpg",
       "/projects/usiannie-yaba/14.jpg",
-      "/projects/usiannie-yaba/15.jpg",
-      "/projects/usiannie-yaba/16.jpg",
       "/projects/usiannie-yaba/17.jpg",
+      "/projects/usiannie-yaba/18.jpg",
+      "/projects/usiannie-yaba/19.jpg",
     ],
   },
   {
