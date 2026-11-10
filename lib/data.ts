@@ -245,33 +245,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "nsitf-office-complex-makurdi",
-    title: "Construction of Office Complex",
-    location: "Makurdi, Benue State",
-    status: "Completed",
-    type: "Office Complex",
-    summary: "NSITF office complex built to serve the Insurance Trust Fund in Benue State.",
-    description:
-      "Construction of an office complex for the Insurance Trust Fund (NSITF) in Makurdi, Benue State. The project covered foundation excavation, pad footings, column starters, block setting and general site works, delivered to institutional standards.",
-    client: "Insurance Trust Fund (NSITF)",
-    contractSum: "₦65,000,000",
-    features: [
-      "Institutional office complex",
-      "Foundation and structural works",
-      "Blockwork and site infrastructure",
-    ],
-    gallery: [
-      "/projects/nsitf-makurdi/2.jpg",
-      "/projects/nsitf-makurdi/3.jpg",
-      "/projects/nsitf-makurdi/4.jpg",
-      "/projects/nsitf-makurdi/5.jpg",
-      "/projects/nsitf-makurdi/6.jpg",
-      "/projects/nsitf-makurdi/7.jpg",
-      "/projects/nsitf-makurdi/8.jpg",
-      "/projects/nsitf-makurdi/9.jpg",
-    ],
-  },
-  {
     slug: "alara-street-sabo",
     title: "Demolition & Construction of Seven Blocks of Flat",
     location: "6 Alara Street, Sabo, Yaba, Lagos",

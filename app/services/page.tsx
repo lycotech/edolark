@@ -39,8 +39,7 @@ export default function ServicesPage() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <Reveal><p className="eyebrow">Our equipment</p></Reveal>
-              <SplitText id="svc-equip-title" text={"What we bring\n*to site.*"} />
+              <Reveal><p className="eyebrow" id="svc-equip-title">Our equipment</p></Reveal>
             </div>
           </div>
           <div className="equip__grid">

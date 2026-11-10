@@ -2,13 +2,39 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { company } from "@/lib/data";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    if (data._honey) return; // spam bot
+    setSending(true);
+    setError(false);
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${company.email}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...data,
+          _subject: `New website enquiry from ${data.name}`,
+          _replyto: data.email,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+      if (!response.ok) throw new Error("send failed");
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   if (submitted) {
@@ -27,6 +53,7 @@ export function ContactForm() {
 
   return (
     <form className="form" onSubmit={submit}>
+      <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
       <div className="form__row">
         <div className="field">
           <input id="contact-name" name="name" type="text" autoComplete="name" placeholder=" " required />
@@ -62,8 +89,13 @@ export function ContactForm() {
         <label htmlFor="contact-message">How can we help?</label>
         <span className="field__bar" />
       </div>
-      <button className="btn btn--red form__submit" type="submit">
-        Send message <ArrowRight size={18} />
+      {error && (
+        <p className="form__error" role="alert">
+          Sorry, your message could not be sent. Please try again or email us at {company.email}.
+        </p>
+      )}
+      <button className="btn btn--red form__submit" type="submit" disabled={sending}>
+        {sending ? "Sending…" : "Send message"} <ArrowRight size={18} />
       </button>
       <small>By submitting, you agree to be contacted about your enquiry.</small>
     </form>

@@ -3164,3 +3164,12 @@ a.ccard:hover .ccard__arrow {
 .band__quote em {
   color: var(--red-hot);
 }
+
+.form__error {
+  color: var(--red);
+  font-size: 14px;
+}
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
