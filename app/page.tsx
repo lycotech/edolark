@@ -69,7 +69,7 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
-        <div className="hero__tag" aria-hidden="true">EDOLARK LTD · LAGOS, NIGERIA</div>
+        <div className="hero__tag" aria-hidden="true">EDOLARK LTD · NIGERIA</div>
         <div className="phero__scroll hero__scroll" aria-hidden="true">
           <span>Scroll</span>
           <i />
