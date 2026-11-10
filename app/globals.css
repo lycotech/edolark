@@ -1434,7 +1434,7 @@ html.has-cursor textarea {
 /* ---------- home services grid ---------- */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1596,8 +1596,17 @@ html.has-cursor textarea {
   color: var(--red);
 }
 .equip__name {
-  margin-top: 12px;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  line-height: 1.15;
+}
+.equip__item::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-bottom: 18px;
+  background: var(--red);
 }
 
 /* ---------- featured / now selling ---------- */

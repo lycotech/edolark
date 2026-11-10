@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, Building2, HardHat, Leaf, Settings, Truck, Wrench } from "lucide-react";
+import { ArrowUpRight, Building2, ClipboardList, Compass, Hammer, Handshake, HardHat, KeyRound, LineChart } from "lucide-react";
 
-const icons = [Building2, Wrench, HardHat, Settings, Leaf, Truck];
+const icons = [Building2, KeyRound, HardHat, Compass, ClipboardList, Handshake, Hammer, LineChart];
 
 export function ServicesList({ services }: { services: { title: string; description: string }[] }) {
   const [open, setOpen] = useState(0);

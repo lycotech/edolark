@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, Check, HardHat, Leaf, Settings, Truck, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, Check, Compass, HardHat, Handshake, KeyRound, LineChart, ClipboardList, Hammer } from "lucide-react";
 import { approach, company, credentials, equipment, portfolioStates, projects, services, welcomeMessage } from "@/lib/data";
 import { HeroSlider } from "@/components/hero-slider";
 import { HorizontalShowcase } from "@/components/horizontal-showcase";
@@ -17,7 +17,7 @@ const slides = [
   { src: "/projects/medina-gbagada/19.jpeg", alt: "Completed semi-detached homes at Medina Estate, Gbagada" },
 ];
 
-const serviceIcons = [Building2, Wrench, HardHat, Settings, Leaf, Truck];
+const serviceIcons = [Building2, KeyRound, HardHat, Compass, ClipboardList, Handshake, Hammer, LineChart];
 
 const showcaseSlugs = [
   "usi-aderun-annie-court-yaba",
@@ -39,7 +39,7 @@ export default function Home() {
     { value: years, suffix: "+", label: "Years in business", note: "Incorporated 2013" },
     { value: projects.length, suffix: "", label: "Projects in our portfolio", note: "Present & past" },
     { value: portfolioStates(), suffix: "", label: "States served", note: "Lagos to Abuja" },
-    { value: services.length, suffix: "", label: "Core services", note: "Design to maintenance" },
+    { value: services.length, suffix: "", label: "Core services", note: "Land to lasting value" },
   ];
 
   return (
@@ -158,7 +158,7 @@ export default function Home() {
         <div className="shell welcome__grid">
           <Reveal variant="clip" className="welcome__media">
             <Parallax speed={0.1}>
-              <Image src="/projects/shared/interior-1.jpg" alt="Finished interior by Edolark" fill sizes="(max-width: 900px) 100vw, 45vw" />
+              <Image src="/projects/medina-gbagada/14.jpeg" alt="Completed semi-detached home at Medina Estate, Gbagada" fill sizes="(max-width: 900px) 100vw, 45vw" />
             </Parallax>
           </Reveal>
           <div className="welcome__copy">
@@ -198,7 +198,6 @@ export default function Home() {
           <div className="equip__grid">
             {equipment.map((item, i) => (
               <Reveal key={item.name} delay={(i % 4) * 80} className="equip__item">
-                <p className="equip__qty">{item.quantity}</p>
                 <p className="equip__name">{item.name}</p>
               </Reveal>
             ))}

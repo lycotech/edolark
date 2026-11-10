@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our services",
-  description: "Explore Edolark Limited's construction and project services — building design, renovation, project management, maintenance, landscaping and procurement in Nigeria.",
+  description: "Edolark Limited's services — real estate development, property sales and acquisition, construction and civil engineering, architectural design, project management, joint ventures, renovation and investment advisory in Nigeria.",
   alternates: { canonical: "/services" },
 };
 
@@ -19,14 +19,14 @@ export default function ServicesPage() {
         title={"Our\n*services*"}
         subtitle="What we do"
         image="/img/ben-allan-BIeC4YK2MTA-unsplash.jpg"
-        intro="End-to-end construction expertise — from the first drawing to a maintained, lasting structure."
+        intro="Real estate, construction and property solutions — from land acquisition to a finished, lasting development."
       />
 
       <section className="services-page section shell" aria-labelledby="services-list-title">
         <div className="services-page__grid">
           <div className="services-page__intro">
-            <Reveal><p className="eyebrow">End-to-end construction expertise</p></Reveal>
-            <SplitText id="services-list-title" text={"Everything you need to design, build and *maintain.*"} />
+            <Reveal><p className="eyebrow">Real estate &amp; construction expertise</p></Reveal>
+            <SplitText id="services-list-title" text={"Everything you need to acquire, design, build and *grow.*"} />
             <Reveal delay={150}><p>{approach.text}</p></Reveal>
           </div>
           <Reveal delay={100}>
@@ -46,7 +46,6 @@ export default function ServicesPage() {
           <div className="equip__grid">
             {equipment.map((item, i) => (
               <Reveal key={item.name} delay={(i % 4) * 80} className="equip__item">
-                <p className="equip__qty">{item.quantity}</p>
                 <p className="equip__name">{item.name}</p>
               </Reveal>
             ))}

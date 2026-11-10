@@ -375,34 +375,44 @@ export const projects: Project[] = [
 
 export const services = [
   {
-    title: "Building Design & Construction",
+    title: "Real Estate Development",
     description:
-      "State-of-the-art, professional building designs, construction and installations with precision for individuals and governmental institutions.",
+      "We transform land and investment opportunities into exceptional residential, commercial and mixed-use developments. Our approach combines strategic planning, innovative design and efficient execution to create properties that deliver lifestyle value and long-term investment returns.",
   },
   {
-    title: "Renovation and Modification",
+    title: "Property Sales, Marketing & Acquisition",
     description:
-      "Repair of buildings and preventive maintenance of systems to keep properties functional and valuable.",
+      "We provide professional property sales, marketing and acquisition services, connecting individuals, families and investors with suitable real estate opportunities. From residential apartments to commercial properties and land investments, we make property ownership and transactions more seamless, transparent and rewarding.",
   },
   {
-    title: "Project Management",
+    title: "Building Construction & Civil Engineering",
     description:
-      "Project recommendations and implementation that integrate the client’s mission and goals for successful completion within stipulated time.",
+      "We undertake building and civil engineering projects with a strong commitment to structural integrity, safety, functionality and quality. Our expertise covers residential, commercial and institutional developments, with a focus on delivering durable structures that meet professional standards and client expectations.",
   },
   {
-    title: "Maintenance Services",
+    title: "Architectural Design & Planning",
     description:
-      "Repair of buildings and preventive maintenance of systems to extend asset life and reduce downtime.",
+      "We translate ideas into functional, aesthetically appealing and sustainable spaces. Working with architectural and design professionals, we provide design coordination, space planning, building layouts and development concepts that balance creativity, practicality and cost efficiency.",
   },
   {
-    title: "Landscaping and Beautification",
+    title: "Project Management & Consultancy",
     description:
-      "Professional landscape architecture services that beautify environments by designing and managing gardens, lawns and outdoor spaces.",
+      "We provide professional project management and construction consultancy services, overseeing projects from inception to completion. Through effective planning, budgeting, procurement, quality control and construction supervision, we help clients achieve project objectives within agreed timelines and budgets.",
   },
   {
-    title: "Procurement",
+    title: "Land Acquisition & Joint Venture Development",
     description:
-      "Effective supply of goods and services at favourable cost, ensuring quality, safe handling and timely delivery.",
+      "We facilitate strategic land acquisition and joint venture development opportunities, bringing landowners and investors together to unlock the full potential of real estate assets. We support development structuring, feasibility assessments, project planning and coordination to create mutually beneficial partnerships.",
+  },
+  {
+    title: "Property Renovation & Facility Improvement",
+    description:
+      "We breathe new life into existing properties through renovation, refurbishment, remodelling and building improvement solutions. Our goal is to enhance functionality, aesthetics, property value and the overall experience of occupants and property owners.",
+  },
+  {
+    title: "Real Estate Investment Advisory",
+    description:
+      "We help individuals, corporate organisations and diaspora investors identify and evaluate real estate investment opportunities. Our advisory approach considers location, market potential, development feasibility and long-term value to support informed property investment decisions.",
   },
 ];
 
@@ -479,13 +489,14 @@ export const expertise = [
 ];
 
 export const equipment = [
-  { name: "Cutting machines", quantity: "2" },
-  { name: "Concrete mixer", quantity: "1" },
-  { name: "Scaffolding pipes", quantity: "400 pcs" },
-  { name: "Acrow pipes", quantity: "287 pcs" },
-  { name: "Concrete vibrators", quantity: "2" },
-  { name: "Levelling instrument", quantity: "1" },
-  { name: "Generator", quantity: "7.5 KVA" },
+  { name: "Dump truck" },
+  { name: "Cutting machines" },
+  { name: "Concrete mixer" },
+  { name: "Scaffolding pipes" },
+  { name: "Acrow pipes" },
+  { name: "Concrete vibrators" },
+  { name: "Levelling instrument" },
+  { name: "Generator" },
 ];
 
 export const credentials = [
