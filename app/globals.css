@@ -774,13 +774,11 @@ html.has-cursor textarea {
 }
 .header.is-scrolled {
   height: 70px;
-  background: rgba(13, 14, 13, 0.72);
+  background: rgba(13, 14, 13, 0.88);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
   border-color: var(--line-light);
-}
-.header.is-hidden {
-  transform: translateY(-101%);
 }
 .header.is-menu {
   background: transparent;

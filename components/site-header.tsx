@@ -22,15 +22,11 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    let last = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 30);
-      setHidden(y > last && y > 320);
-      last = y;
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -58,7 +54,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className={`header${scrolled ? " is-scrolled" : ""}${hidden && !open ? " is-hidden" : ""}${open ? " is-menu" : ""}`}>
+      <header className={`header${scrolled ? " is-scrolled" : ""}${open ? " is-menu" : ""}`}>
         <div className="header__inner shell">
           <Logo onClick={() => setOpen(false)} />
 
