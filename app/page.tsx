@@ -184,12 +184,11 @@ export default function Home() {
       </section>
 
       {/* ---------------- EQUIPMENT ---------------- */}
-      <section className="equip section" aria-labelledby="equip-title">
+      <section className="equip section" aria-labelledby="equip-label">
         <div className="shell">
           <div className="section-head">
             <div>
-              <Reveal><p className="eyebrow">Our equipment</p></Reveal>
-              <SplitText id="equip-title" text={"Equipped to\n*deliver on site.*"} />
+              <Reveal><p className="eyebrow" id="equip-label">Our equipment</p></Reveal>
             </div>
             <Reveal delay={150}>
               <p className="section-head__note">The plant, formwork and measuring tools we bring to every site.</p>
