@@ -15,7 +15,12 @@ export default async function AdminPage() {
   let enquiries: Enquiry[] = [];
   const problems: string[] = [];
   if (!process.env.SUPABASE_URL) problems.push("SUPABASE_URL is not set in this deployment.");
-  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) problems.push("SUPABASE_SERVICE_ROLE_KEY is not set in this deployment.");
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    const similar = Object.keys(process.env).filter((name) => /supa|service|secret/i.test(name) && !name.startsWith("npm_"));
+    problems.push(
+      `SUPABASE_SERVICE_ROLE_KEY is not set in this deployment. Supabase-like variables this deployment can see: ${similar.length ? similar.join(", ") : "none"}. Environment: ${process.env.VERCEL_ENV ?? "unknown"}, build ${(process.env.VERCEL_GIT_COMMIT_SHA ?? "unknown").slice(0, 7)}.`
+    );
+  }
   if (client) {
     const content = await client.from("content").select("key").limit(1);
     if (content.error) problems.push(`Table "content": ${content.error.message}`);
