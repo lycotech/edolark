@@ -3593,3 +3593,14 @@ html:has(.admin) .footer,
 html:has(.admin) .skip-link {
   display: none !important;
 }
+.admin-note--ok {
+  background: #e2f4e7;
+  color: #17612f;
+}
+.admin-note ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+.admin-note p {
+  margin: 0;
+}

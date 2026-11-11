@@ -376,6 +376,7 @@ function EnquiriesPanel({ initial, connected }: { initial: Enquiry[]; connected:
 /* ====================== SHELL ====================== */
 export function AdminApp({
   connected,
+  problems,
   projects,
   team,
   services,
@@ -383,6 +384,7 @@ export function AdminApp({
   enquiries,
 }: {
   connected: boolean;
+  problems: string[];
   projects: Project[];
   team: TeamMember[];
   services: Service[];
@@ -412,10 +414,16 @@ export function AdminApp({
         </span>
       </header>
 
-      {!connected && (
-        <p className="admin-note admin-note--warn">
-          Supabase is not connected, so you can look around but changes can’t be saved. Follow SETUP-ADMIN.md to connect it.
-        </p>
+      {connected ? (
+        <p className="admin-note admin-note--ok">Supabase connected. Database tables and the photo bucket are working.</p>
+      ) : (
+        <div className="admin-note admin-note--warn">
+          <p>Supabase is not fully connected, so changes can’t be saved yet:</p>
+          <ul>
+            {problems.map((problem) => <li key={problem}>{problem}</li>)}
+          </ul>
+          <p>After fixing it in Vercel (Settings → Environment Variables), redeploy and reload this page. See SETUP-ADMIN.md.</p>
+        </div>
       )}
 
       <nav className="admin-tabs" aria-label="Sections">
