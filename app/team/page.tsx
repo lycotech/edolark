@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { team } from "@/lib/data";
+import { getTeam } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { Magnetic, Reveal, SplitText } from "@/components/motion";
 import { TeamCard } from "@/components/team-card";
@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/team" },
 };
 
-export default function TeamPage() {
+export default async function TeamPage() {
+  const team = await getTeam();
   return (
     <>
       <PageHero

@@ -484,9 +484,9 @@ export const credentials = [
 ];
 
 /** Distinct Nigerian states/territories represented in the portfolio. */
-export function portfolioStates() {
+export function portfolioStates(list: { location: string }[] = projects) {
   const set = new Set(
-    projects.map((p) => {
+    list.map((p) => {
       const last = p.location.split(",").pop()!.trim().replace(/ State$/i, "");
       return last;
     })

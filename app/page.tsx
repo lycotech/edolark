@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Building2, Check, Compass, HardHat, Handshake, KeyRound, LineChart, ClipboardList, Hammer } from "lucide-react";
-import { approach, company, credentials, equipment, portfolioStates, projects, services, welcomeMessage } from "@/lib/data";
+import { approach, company, credentials, portfolioStates, welcomeMessage } from "@/lib/data";
+import { getEquipment, getProjects, getServices } from "@/lib/content";
 import { HeroSlider } from "@/components/hero-slider";
 import { HorizontalShowcase } from "@/components/horizontal-showcase";
 import { Counter, Magnetic, Parallax, Reveal, ScrollFill, SplitText } from "@/components/motion";
@@ -28,17 +29,19 @@ const showcaseSlugs = [
   "palms-gardens-osogbo",
 ];
 
-export default function Home() {
-  const featured = projects[0];
-  const showcase = showcaseSlugs
+export default async function Home() {
+  const [projects, services, equipment] = await Promise.all([getProjects(), getServices(), getEquipment()]);
+  const featured = projects.find((p) => p.status === "Available now" && p.gallery.length > 0) ?? projects.find((p) => p.gallery.length > 0) ?? projects[0];
+  const picked = showcaseSlugs
     .map((slug) => projects.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => !!p && p.gallery.length > 0);
+  const showcase = picked.length >= 3 ? picked : projects.filter((p) => p.gallery.length > 0).slice(0, 6);
   const years = new Date().getFullYear() - 2013;
 
   const stats = [
     { value: years, suffix: "+", label: "Years in business", note: "Incorporated 2013" },
     { value: projects.length, suffix: "", label: "Projects in our portfolio", note: "Present & past" },
-    { value: portfolioStates(), suffix: "", label: "States served", note: "Lagos to Abuja" },
+    { value: portfolioStates(projects), suffix: "", label: "States served", note: "Lagos to Abuja" },
     { value: services.length, suffix: "", label: "Core services", note: "Land to lasting value" },
   ];
 

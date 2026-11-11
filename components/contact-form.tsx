@@ -17,18 +17,22 @@ export function ContactForm() {
     setSending(true);
     setError(false);
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${company.email}`, {
+      const payload = { ...data, _subject: `New website enquiry from ${data.name}`, _replyto: data.email, _template: "table", _captcha: "false" };
+      const email = fetch(`https://formsubmit.co/ajax/${company.email}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          ...data,
-          _subject: `New website enquiry from ${data.name}`,
-          _replyto: data.email,
-          _template: "table",
-          _captcha: "false",
-        }),
-      });
-      if (!response.ok) throw new Error("send failed");
+        body: JSON.stringify(payload),
+      }).then((response) => response.ok);
+      const store = fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((result) => Boolean(result.stored));
+      const [emailed, stored] = await Promise.allSettled([email, store]);
+      const ok = (outcome: PromiseSettledResult<boolean>) => outcome.status === "fulfilled" && outcome.value;
+      if (!ok(emailed) && !ok(stored)) throw new Error("send failed");
       setSubmitted(true);
     } catch {
       setError(true);

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { approach, equipment, services } from "@/lib/data";
+import { approach } from "@/lib/data";
+import { getEquipment, getServices } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { Magnetic, Reveal, SplitText } from "@/components/motion";
 import { ServicesList } from "@/components/services-list";
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const [services, equipment] = await Promise.all([getServices(), getEquipment()]);
   return (
     <>
       <PageHero

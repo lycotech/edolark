@@ -1,4 +1,4 @@
-import { projects } from "@/lib/data";
+import { getProjects } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { ProjectsExplorer } from "@/components/projects-explorer";
 import { Reveal, SplitText } from "@/components/motion";
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/projects" },
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
   return (
     <>
       <PageHero

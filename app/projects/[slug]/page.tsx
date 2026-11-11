@@ -2,17 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight, Banknote, Briefcase, Calendar, Check, MapPin } from "lucide-react";
-import { company, projects } from "@/lib/data";
+import { company } from "@/lib/data";
+import { getProjects } from "@/lib/content";
 import { ProjectGallery } from "@/components/project-gallery";
 import { Magnetic, Reveal, SplitText } from "@/components/motion";
 import type { Metadata } from "next";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const projects = await getProjects();
   return projects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const projects = await getProjects();
   const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
   return {
@@ -27,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const projects = await getProjects();
   const index = projects.findIndex((p) => p.slug === slug);
   if (index === -1) notFound();
   const project = projects[index];

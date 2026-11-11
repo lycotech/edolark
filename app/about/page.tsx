@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { company, credentials, expertise, portfolioStates, projects, services, values } from "@/lib/data";
+import { company, credentials, expertise, portfolioStates, values } from "@/lib/data";
+import { getProjects, getServices } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { SocialLinks } from "@/components/social-links";
 import { Counter, Magnetic, Parallax, Reveal, ScrollFill, SplitText } from "@/components/motion";
@@ -13,7 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const [projects, services] = await Promise.all([getProjects(), getServices()]);
   const years = new Date().getFullYear() - 2013;
 
   return (
@@ -90,7 +92,7 @@ export default function AboutPage() {
           {[
             { value: years, suffix: "+", label: "Years in business" },
             { value: projects.length, suffix: "", label: "Projects in our portfolio" },
-            { value: portfolioStates(), suffix: "", label: "States served" },
+            { value: portfolioStates(projects), suffix: "", label: "States served" },
             { value: services.length, suffix: "", label: "Core services" },
           ].map((stat, i) => (
             <Reveal key={stat.label} delay={i * 90} className="stats__item">
